@@ -2,6 +2,7 @@
 FROM node:11.15.0-alpine as build
 #Setting up the work directory for the application.
 WORKDIR /app
+COPY package.json .
 #to install the dependencies inside the container and build the application
 RUN npm install && npm run build
 
