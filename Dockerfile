@@ -10,6 +10,6 @@ RUN npm install && npm run build --prod
 #Now I wil lsetup a NGINX proxy server for that.
 FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
-COPY --from=build /app/dist/ .
+COPY --from=build /app/dist/NGDockerAssignment .
 
 
