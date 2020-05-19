@@ -1,7 +1,8 @@
 #Taking a base image on top of which we'll run angular
-FROM node:11.15.0-alpine as build
+FROM node:14.2.0 as build
 #Setting up the work directory for the application.
 WORKDIR /app
+#Copying the package.json to the working dir in order
 COPY package.json .
 #to install the dependencies inside the container and build the application
 RUN npm install && npm run build
